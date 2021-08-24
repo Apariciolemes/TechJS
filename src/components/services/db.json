@@ -1,0 +1,61 @@
+{
+    "courses": [
+        {
+            "level": "Easy",
+            "contentLevel": [
+                {
+                    "title": "Easy - 1",
+                    "description": "Lorem inspum sll no space",
+                    "sequency": 0
+                },
+                {
+                    "title": "Easy - 2",
+                    "description": "Lorem inspum sll no space",
+                    "sequency": 1
+                },
+                {
+                    "title": "Easy - 3",
+                    "description": "Lorem inspum sll no space",
+                    "sequency": 2
+                }
+            ]
+        },
+        {
+            "level": "Medium",
+            "contentLevel": [
+                {
+                    "title": "Medium - 1",
+                    "description": "Lorem inspum sll no space",
+                    "sequency": 0
+                },
+                {
+                    "title": "Medium - 2",
+                    "description": "Lorem inspum sll no space",
+                    "sequency": 1
+                },
+                {
+                    "title": "Medium - 3",
+                    "description": "Lorem inspum sll no space",
+                    "sequency": 2
+                }
+            ]
+        },
+        {
+            "level": "Advanced",
+            "contentLevel": [
+                {
+                    "title": "Advanced - 1",
+                    "description": "Lorem inspum sll no space"
+                },
+                {
+                    "title": "Advanced - 2",
+                    "description": "Lorem inspum sll no space"
+                },
+                {
+                    "title": "Advanced - 3",
+                    "description": "Lorem inspum sll no space"
+                }
+            ]
+        }
+    ]
+}
