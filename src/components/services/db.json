@@ -1,7 +1,7 @@
 {
     "courses": [
         {
-            "level": "Easy",
+            "level": "easy",
             "contentLevel": [
                 {
                     "title": "Easy - 1",
@@ -21,7 +21,7 @@
             ]
         },
         {
-            "level": "Medium",
+            "level": "medium",
             "contentLevel": [
                 {
                     "title": "Medium - 1",
@@ -41,7 +41,7 @@
             ]
         },
         {
-            "level": "Advanced",
+            "level": "advanced",
             "contentLevel": [
                 {
                     "title": "Advanced - 1",

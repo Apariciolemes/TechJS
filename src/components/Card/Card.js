@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native'
 
-export function Card({ title, level }) {
+export function Card({ title }) {
     return (
-        <View style={styles.cardWrraper} onClick={level}>
+        <View style={styles.cardWrraper}>
             <Text style={styles.title}> {title} </Text>
         </View>
     )
