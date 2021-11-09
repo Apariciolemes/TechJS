@@ -6,11 +6,14 @@ export function CourseClasses({ description, title }) {
         <View style={styles.container}>
             <Text style={{
                 color: '#fff',
-                fontSize: 20
+                fontWeight: 'bold',
+                fontSize: 23,
+                marginBottom: 25,
             }}>{title}</Text>
             <Text style={{
                 color: '#fff',
-                fontSize: 20
+                fontSize: 20,
+                fontStyle: 'italic'
             }}>{description}</Text>
         </View>
     )

@@ -1,59 +1,59 @@
 {
     "courses": [
         {
-            "level": "easy",
+            "level": "Fácil",
             "contentLevel": [
                 {
-                    "title": "Easy - 1",
-                    "description": "Lorem inspum sll no space",
+                    "title": "1-) Questão nível Fácil",
+                    "description": "Na maioria das linguagens de programação, o escopo das variáveis locais é vinculado ao bloco onde elas são declaradas. Sendo assim, elas “morrem” ao final da instrução em que estão sendo executadas. Será que isso se aplica também à linguagem JavaScript? Vamos verificar:",
                     "sequency": 0
                 },
                 {
-                    "title": "Easy - 2",
-                    "description": "Lorem inspum sll no space",
+                    "title": "2-) Questão nível Fácil",
+                    "description": "Na maioria das linguagens de programação, o escopo das variáveis locais é vinculado ao bloco onde elas são declaradas. Sendo assim, elas “morrem” ao final da instrução em que estão sendo executadas. Será que isso se aplica também à linguagem JavaScript? Vamos verificar:",
                     "sequency": 1
                 },
                 {
-                    "title": "Easy - 3",
-                    "description": "Lorem inspum sll no space",
+                    "title": "3-) Questão nível Fácil",
+                    "description": "Na maioria das linguagens de programação, o escopo das variáveis locais é vinculado ao bloco onde elas são declaradas. Sendo assim, elas “morrem” ao final da instrução em que estão sendo executadas. Será que isso se aplica também à linguagem JavaScript? Vamos verificar:",
                     "sequency": 2
                 }
             ]
         },
         {
-            "level": "medium",
+            "level": "Médio",
             "contentLevel": [
                 {
-                    "title": "Medium - 1",
-                    "description": "Lorem inspum sll no space",
+                    "title": "1-) Questão nível Médio ",
+                    "description": "Na maioria das linguagens de programação, o escopo das variáveis locais é vinculado ao bloco onde elas são declaradas. Sendo assim, elas “morrem” ao final da instrução em que estão sendo executadas. Será que isso se aplica também à linguagem JavaScript? Vamos verificar:",
                     "sequency": 0
                 },
                 {
-                    "title": "Medium - 2",
-                    "description": "Lorem inspum sll no space",
+                    "title": "2-) Questão nível Médio",
+                    "description": "Na maioria das linguagens de programação, o escopo das variáveis locais é vinculado ao bloco onde elas são declaradas. Sendo assim, elas “morrem” ao final da instrução em que estão sendo executadas. Será que isso se aplica também à linguagem JavaScript? Vamos verificar:",
                     "sequency": 1
                 },
                 {
-                    "title": "Medium - 3",
-                    "description": "Lorem inspum sll no space",
+                    "title": "3-) Questão nível Médio ",
+                    "description": "Na maioria das linguagens de programação, o escopo das variáveis locais é vinculado ao bloco onde elas são declaradas. Sendo assim, elas “morrem” ao final da instrução em que estão sendo executadas. Será que isso se aplica também à linguagem JavaScript? Vamos verificar:",
                     "sequency": 2
                 }
             ]
         },
         {
-            "level": "advanced",
+            "level": "Avançado",
             "contentLevel": [
                 {
-                    "title": "Advanced - 1",
-                    "description": "Lorem inspum sll no space"
+                    "title": "1-) Questão nível Avançado",
+                    "description": "Na maioria das linguagens de programação, o escopo das variáveis locais é vinculado ao bloco onde elas são declaradas. Sendo assim, elas “morrem” ao final da instrução em que estão sendo executadas. Será que isso se aplica também à linguagem JavaScript? Vamos verificar:"
                 },
                 {
-                    "title": "Advanced - 2",
-                    "description": "Lorem inspum sll no space"
+                    "title": "2-) Questão nível Avançado",
+                    "description": "Na maioria das linguagens de programação, o escopo das variáveis locais é vinculado ao bloco onde elas são declaradas. Sendo assim, elas “morrem” ao final da instrução em que estão sendo executadas. Será que isso se aplica também à linguagem JavaScript? Vamos verificar:"
                 },
                 {
-                    "title": "Advanced - 3",
-                    "description": "Lorem inspum sll no space"
+                    "title": "3-) Questão nível Avançado",
+                    "description": "Na maioria das linguagens de programação, o escopo das variáveis locais é vinculado ao bloco onde elas são declaradas. Sendo assim, elas “morrem” ao final da instrução em que estão sendo executadas. Será que isso se aplica também à linguagem JavaScript? Vamos verificar:"
                 }
             ]
         }

@@ -8,10 +8,10 @@ import db from '../components/services/db.json'
 
 
 export function Home() {
-    const [cards, setCards] = useState(['easy', 'medium', 'advanced'])
+    const [cards, setCards] = useState(['Fácil', 'Médio', 'Avançado'])
     const [isComponent, setComponent] = useState(undefined)
     const [contentByLevel, setContentByLevel] = useState([])
-    const [valuesCourses, setValuesCourses] = useState({ description: 'teste', title: 'teste' })
+    const [valuesCourses, setValuesCourses] = useState({ description: undefined, title: undefined })
     const [positionContent, setPositionContent] = useState(-1)
 
     useEffect(() => {
@@ -37,6 +37,16 @@ export function Home() {
         }
 
     };
+
+
+    function handleNext() {
+        if (positionContent < contentByLevel.length - 1) {
+            setPositionContent(positionContent + 1)
+        }
+
+    }
+
+
     return (
         <SafeAreaView style={{
             flex: 1,
@@ -54,8 +64,8 @@ export function Home() {
             {positionContent >= 0 && <View style={styles.viewBtn}>
                 <Button title="Anterior" onPress={() => setPositionContent(positionContent - 1)}
                     color="#841584" />
-                <Button title="Próximo" onPress={() => setPositionContent(positionContent + 1)}
-                    color="#841584" />
+                {<Button title={positionContent < contentByLevel.length - 1 ? "Próximo" : 'Iniciar Exercícios'} onPress={() => handleNext()}
+                    color="#841584" />}
             </View>}
 
 
