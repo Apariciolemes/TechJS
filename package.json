@@ -3,15 +3,19 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android --port 8088",
+    "android": "react-native run-android --port 9999",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint ."
   },
   "dependencies": {
+    "link": "^0.1.5",
     "react": "17.0.1",
-    "react-native": "0.64.2"
+    "react-native": "^0.64.2",
+    "react-native-elements": "^3.4.2",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-vector-icons": "^9.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",

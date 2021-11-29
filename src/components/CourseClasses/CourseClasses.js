@@ -1,21 +1,26 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, SafeAreaView, ScrollView, } from 'react-native'
 
 export function CourseClasses({ description, title }) {
     return (
-        <View style={styles.container}>
-            <Text style={{
-                color: '#fff',
-                fontWeight: 'bold',
-                fontSize: 23,
-                marginBottom: 25,
-            }}>{title}</Text>
-            <Text style={{
-                color: '#fff',
-                fontSize: 20,
-                fontStyle: 'italic'
-            }}>{description}</Text>
-        </View>
+        <SafeAreaView style={styles.container}>
+            <ScrollView >
+                <Text style={{
+                    color: '#fff',
+                    fontWeight: 'bold',
+                    fontSize: 32,
+                    marginBottom: 25,
+                    textAlign: 'center',
+                    marginTop: 20
+                }}>{title}</Text>
+                <Text style={{
+                    color: '#fff',
+                    fontSize: 24,
+                    textAlign: 'justify',
+                    paddingHorizontal: 25
+                }}>{description}</Text>
+            </ScrollView>
+        </SafeAreaView>
     )
 }
 
@@ -24,7 +29,9 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        height: '35%',
-        width: '66%'
+        height: '100%',
+        width: '100%',
+
+
     }
 })

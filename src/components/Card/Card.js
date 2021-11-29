@@ -13,16 +13,16 @@ export function Card({ title }) {
 const styles = StyleSheet.create({
     cardWrraper: {
         backgroundColor: '#662d91',
-        width: 220,
+        width: 310,
         paddingVertical: 30,
-        borderRadius: 10,
+        borderRadius: 5,
         marginVertical: 10
     },
     title: {
         textAlign: 'center',
         color: '#FFF',
-        fontSize: 32,
+        textTransform: 'uppercase',
+        fontSize: 28,
         fontWeight: 'bold',
     }
 })
-
