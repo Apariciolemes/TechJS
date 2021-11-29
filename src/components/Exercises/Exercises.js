@@ -11,8 +11,6 @@ export function Exercises({ exercises }) {
     useEffect(() => {
         if (!exercisesState) {
             setExercisesState(exercises)
-            console.log('exercisesState ->', exercisesState);
-
         }
 
     }, []);
@@ -22,12 +20,11 @@ export function Exercises({ exercises }) {
         exercisesValues.forEach(exercise => {
             exercise.checked = false
         });
-        setExercisesState(exercisesState)
+        setExercisesState({ ...exercisesState })
     }
 
     // ID 2 
     function onPressCheckBox(id) {
-        console.log('id', id);
         clear()
         const exercisesValues = exercisesState.options.values
         // 2 === 2
@@ -37,10 +34,7 @@ export function Exercises({ exercises }) {
 
         if (exercise) {
             exercise.checked = true
-            setExercisesState(exercisesState)
-            console.log('exercesisState modificada', JSON.stringify(exercisesState));
-            console.log('onPressCheckBox - ID', exercise.id);
-            console.log('onPressCheckBox - CHECKED', exercise.checked);
+            setExercisesState({ ...exercisesState })
             return
         }
     }
