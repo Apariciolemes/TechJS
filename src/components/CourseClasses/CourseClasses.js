@@ -4,7 +4,11 @@ import { StyleSheet, View, Text, SafeAreaView, ScrollView, } from 'react-native'
 export function CourseClasses({ description, title }) {
     return (
         <SafeAreaView style={styles.container}>
-            <ScrollView >
+            <ScrollView style={{
+                borderRadius: 32,
+                marginHorizontal: 15,
+
+            }}>
                 <Text style={{
                     color: '#fff',
                     fontWeight: 'bold',
@@ -13,12 +17,20 @@ export function CourseClasses({ description, title }) {
                     textAlign: 'center',
                     marginTop: 20
                 }}>{title}</Text>
-                <Text style={{
-                    color: '#fff',
-                    fontSize: 24,
-                    textAlign: 'justify',
-                    paddingHorizontal: 25
-                }}>{description}</Text>
+                <View style={{
+                    borderRadius: 32,
+                    backgroundColor: '#662d91',
+                }}>
+                    <Text style={{
+                        paddingVertical: 15,
+                        color: '#fff',
+                        fontSize: 20,
+                        fontWeight: '100',
+                        textAlign: 'justify',
+                        paddingHorizontal: 25,
+
+                    }}>{description}</Text>
+                </View>
             </ScrollView>
         </SafeAreaView>
     )

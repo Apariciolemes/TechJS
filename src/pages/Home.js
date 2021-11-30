@@ -4,6 +4,7 @@ import { SafeAreaView, Text, TouchableOpacity, StyleSheet, View } from 'react-na
 import { Card } from '../components/Card/Card'
 import { CourseClasses } from '../components/CourseClasses/CourseClasses'
 import { Exercises } from '../components/Exercises/Exercises'
+import { Login } from '../components/Login/Login'
 import db from '../components/services/db.json'
 
 
@@ -12,28 +13,7 @@ export function Home() {
     const [showExercises, setShowExercises] = useState(false)
     const [isComponent, setComponent] = useState(undefined)
     const [contentByLevel, setContentByLevel] = useState([])
-    const [exercisesByLevel, setExercisesByLevel] = useState({
-        exercises: {
-            enunciation: "Quando é utilizado CONST para criar váriaveis?",
-            options: {
-                idIsCorrect: "1",
-                values: [
-                    {
-                        "id": "1",
-                        "description": "Quando você não vai alterar o valor daquela váriavel"
-                    },
-                    {
-                        "id": "2",
-                        "description": "Quando você precisa alterar o valor daquela váriavel"
-                    },
-                    {
-                        "id": "3",
-                        "description": "Quando você precisa passar como parâmetro para uma função"
-                    }
-                ]
-            }
-        }
-    })
+    const [exercisesByLevel, setExercisesByLevel] = useState([])
     const [valuesCourses, setValuesCourses] = useState({ description: undefined, title: undefined })
     const [positionContent, setPositionContent] = useState(-1)
 
@@ -43,6 +23,13 @@ export function Home() {
         }
 
     }, [positionContent]);
+
+    function previewHome() {
+        setPositionContent(-1)
+        setContentByLevel([])
+        setExercisesByLevel([])
+        setShowExercises(false)
+    }
 
     function handleGetLevel(level) {
         setComponent(level)
@@ -59,7 +46,8 @@ export function Home() {
 
         const filterExercisesByLevel = db.courses.filter(content => content.level === level)[0].exercises
         if (filterExercisesByLevel) {
-            setExercisesByLevel(filterExercisesByLevel)
+            setExercisesByLevel([...filterExercisesByLevel])
+
         }
     };
 
@@ -80,16 +68,17 @@ export function Home() {
             flex: 1,
             justifyContent: 'center',
             alignItems: 'center',
-            backgroundColor: '#000'
+            backgroundColor: '#111'
         }}>
-            {positionContent < 0 && <Text style={styles.title}>Escolha o nível compatível com o seu conhecimento:</Text>}
+            {positionContent < 0 && <Text style={styles.title}>Escolha o seu nível!!!!!</Text>}
+            {positionContent < 0 && <Text style={styles.subTitle}>Aprenda agora mesmo conosco, selecione o card baseado no seu conhecimento.</Text>}
             {cards.map((level, index) => (
                 positionContent < 0 &&
                 <TouchableOpacity onPress={() => handleGetLevel(level)} key={index}>
                     <Card key={index} title={level} />
                 </TouchableOpacity>
             ))}
-            {positionContent >= 0 && !showExercises ? <CourseClasses title={valuesCourses?.title} description={valuesCourses?.description} /> : positionContent > 0 && showExercises ? <Exercises exercises={exercisesByLevel} /> : null}
+            {positionContent >= 0 && !showExercises ? <CourseClasses title={valuesCourses?.title} description={valuesCourses?.description} /> : positionContent > 0 && showExercises ? <Exercises goTo={() => previewHome()} exercises={exercisesByLevel.length ? exercisesByLevel : []} /> : null}
             {positionContent >= 0 && !showExercises ? <View style={styles.viewBtn}>
                 <TouchableOpacity style={styles.btns} onPress={() => setPositionContent(positionContent - 1)}>
                     <Text style={styles.btnText}>Anterior</Text>
@@ -108,7 +97,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: 'center',
         justifyContent: 'space-between',
-        height: '15%',
+        height: '12%',
         width: '100%',
         paddingHorizontal: 25,
     },
@@ -127,9 +116,20 @@ const styles = StyleSheet.create({
         width: '100%',
         paddingHorizontal: 15,
         textAlign: 'center',
-        color: '#FFF',
-        fontSize: 32,
+        color: '#662d91',
+        fontSize: 30,
         fontWeight: 'bold',
-        marginBottom: 16
+        marginBottom: 4,
+        textTransform: 'uppercase',
+    },
+    subTitle: {
+        width: '100%',
+        paddingHorizontal: 15,
+        textAlign: 'center',
+        color: '#FFF',
+        fontSize: 20,
+        fontWeight: 'bold',
+        marginBottom: 24,
+        opacity: 0.9
     }
 })
